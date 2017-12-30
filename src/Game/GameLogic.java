@@ -1,29 +1,29 @@
 package Game;
 
+import javafx.application.Platform;
+
 public class GameLogic {
 
-    //create variables
-    private Long money = 10L;
+    private long money = 10L;
+    private String moneyAsString = Long.toString(money);
+    private Long moneyIncrement;
 
-    //get/set for money
-    public Long getMoney() {
-        return money;
+    public void updateMoneyIncrement(Long level){
+        moneyIncrement += level;
     }
 
-    public void setMoney(Long money) {
-        this.money += money;
-        //upgrade money text also
-        //MainGame.moneyText.setText(Long.toString(this.money));
+    public void pullUiUpdate(){
+        money += moneyIncrement;
+        System.out.println(moneyAsString);
     }
 
-    public void updateMoney(){
+    public void mainGameLogic() {
 
-        while (true){
-            try{
-                setMoney(money);
-                System.out.println(money);
-                Thread.sleep(1000);;
-            } catch(InterruptedException e){
+        while (true) {
+            try {
+                Platform.runLater(() -> pullUiUpdate());
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
                 System.out.println(e);
             }
         }
@@ -32,13 +32,10 @@ public class GameLogic {
 
 
     //create new thread for background and start clock for main game
-    public void start(){
-        Thread t1 = new Thread(new Runnable() {
-            public void run()
-            {
-                updateMoney();
-            }});
+    public void start() {
+        Thread t1 = new Thread(() -> mainGameLogic());
+        t1.setDaemon(true);
         t1.start();
-    }
 
+    }
 }
