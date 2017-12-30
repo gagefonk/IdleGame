@@ -1,4 +1,4 @@
-package MainGame;
+package Game;
 
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -9,7 +9,7 @@ public class StartMenu {
     public Button startGameBtn;
     public Button exitGameBtn;
 
-    //create obj for MainGame reference
+    //create obj for Game reference
     MainGame mainGame = new MainGame();
 
     //start game Button Action
