@@ -100,7 +100,7 @@ public class MainGame implements Initializable {
     //create initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        gameLogic.start();
+        //gameLogic.start();
     }
 
     //draw window for main game

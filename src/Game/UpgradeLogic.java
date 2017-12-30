@@ -9,7 +9,7 @@ public class UpgradeLogic {
     private Long t4Level = 0L;
     private Long t5Level = 0L;
     private Long t6Level = 0L;
-    
+
     //create upgradeModifier
     private int upgradeModifier = 1;
     
