@@ -8,7 +8,6 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.math.BigInteger;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -105,7 +104,7 @@ public class MainGame implements Initializable {
 
     //draw window for main game
     public void display() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("mainGame.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../Fxmls/mainGame.fxml"));
         Stage stage = new Stage();
         stage.setOnCloseRequest(e -> closeProgram());
         stage.setTitle("Idle Game");
