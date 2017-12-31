@@ -1,5 +1,6 @@
 package Game;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -13,10 +14,9 @@ import java.util.ResourceBundle;
 
 public class MainGame implements Initializable {
 
-    //create gamelogic/upgradelogic object
+    //create gameLogic/upgradeLogic object
     GameLogic gameLogic = new GameLogic();
     UpgradeLogic upgrade = new UpgradeLogic();
-
 
     //create menu
     public MenuBar mainMenuBar;
@@ -44,7 +44,13 @@ public class MainGame implements Initializable {
     public Text t6TextLevel;
 
     //create moneyText text
-    public static Text moneyText;
+    @FXML
+    //public Text moneyText;
+    public Label moneyText;
+
+    public void setMoneyText(String string){
+        moneyText.setText(string);
+    }
 
     //create about menu creation
     About about = new About();
@@ -99,7 +105,7 @@ public class MainGame implements Initializable {
     //create initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //gameLogic.start();
+        gameLogic.start();
     }
 
     //draw window for main game

@@ -4,32 +4,12 @@ import javafx.application.Platform;
 
 public class GameLogic {
 
-    private long money = 10L;
-    private String moneyAsString = Long.toString(money);
-    private Long moneyIncrement = 0L;
-    private Long t1 = 0L;
-    UpgradeLogic upgrade = new UpgradeLogic();
 
-    public Long updateMoneyIncrement(Long TotalLevels, Long levels){
-        if (TotalLevels < levels ) {
-            moneyIncrement += TotalLevels;
-            return moneyIncrement;
-        }else{
-            return null;
-        }
-    }
-
-    public void setMoneyAsString(){
-        moneyAsString = Long.toString(money);
-    }
+    UpgradeLogic upgradeLogic;
+    MainGame main;
 
     public void pullUiUpdate(){
-       // updateMoneyIncrement(upgrade.getTotalLevels(), moneyIncrement);
-        money += moneyIncrement;
-        setMoneyAsString();
-        //upgrade.addTotalLevels();
-        System.out.println(moneyAsString);
-        System.out.println(upgrade.getT1Level());
+       main.setMoneyText(Long.toString(upgradeLogic.getT1Level()));
     }
 
     public void mainGameLogic() {

@@ -27,7 +27,7 @@
       </MenuBar>
       <Pane layoutX="691.0" layoutY="107.0" prefHeight="34.0" prefWidth="195.0" style="-fx-background-color: #013335;">
          <children>
-            <Text fx:id="moneyText" fill="WHITE" layoutX="13.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="168.13671875" />
+            <Text fx:id="moneyText1" fill="WHITE" layoutX="13.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="168.13671875" />
          </children>
       </Pane>
       <GridPane layoutX="9.0" layoutY="350.0" prefHeight="337.0" prefWidth="882.0">
@@ -95,5 +95,6 @@
          </children>
       </GridPane>
       <Button fx:id="modifierBtn" layoutX="740.0" layoutY="153.0" mnemonicParsing="false" onAction="#modifierBtnClicked" prefHeight="25.0" prefWidth="97.0" text="Modifier: 1" />
+      <Label fx:id="moneyText" layoutX="416.0" layoutY="256.0" text="Label" />
    </children>
 </AnchorPane>

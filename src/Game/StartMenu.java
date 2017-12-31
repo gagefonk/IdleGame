@@ -12,9 +12,11 @@ public class StartMenu {
     //create obj for Game reference
     MainGame mainGame = new MainGame();
 
+
     //start game Button Action
     public void startGameBtnClicked() throws Exception {
         mainGame.display();
+        //gameLogic.start();
         closeStartMenu(startGameBtn);
     }
 
