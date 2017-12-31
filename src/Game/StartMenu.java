@@ -9,14 +9,13 @@ public class StartMenu {
     public Button startGameBtn;
     public Button exitGameBtn;
 
-    //create obj for Game reference
+    //create objs for Game reference
     MainGame mainGame = new MainGame();
 
 
     //start game Button Action
     public void startGameBtnClicked() throws Exception {
         mainGame.display();
-        //gameLogic.start();
         closeStartMenu(startGameBtn);
     }
 

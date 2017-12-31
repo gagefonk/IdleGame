@@ -4,22 +4,49 @@ import javafx.application.Platform;
 
 public class GameLogic {
 
-    //create link to Game Controller
-    private GameController gameController;
+    //ref obj
+    UpgradeLogic upgradeLogic;
+    MainGame mainGame;
 
-    //init method for game controller
-    public void init(GameController gameController){
-        this.gameController = gameController;
+    //create variables
+    private long money = 10L;
+    private long moneyIncrement = 0L;
+
+    public GameLogic(UpgradeLogic upgradeLogic, MainGame mainGame) {
+        this.upgradeLogic = upgradeLogic;
+        this.mainGame = mainGame;
     }
 
+    public void updateUi(){
+        mainGame.moneyText.setText("$" + Long.toString(money += moneyIncrement));
+        upgradeLogic.calculateTotalValue();
+        moneyIncrement = upgradeLogic.getTotalValue();
+
+
+        //print for testing
+        System.out.println(upgradeLogic.getTotalValue());
+    }
+
+
+
+
+
+
+
+
+
+
+
+    //main game logic
     public void mainGameLogic() {
 
         while (true) {
             Platform.runLater(() -> {
                 try{
-                    gameController.updateUi();
+                    updateUi();
                 }catch(NullPointerException t){
                     t.printStackTrace();
+                    System.exit(1);
                 }
             });
             try {
@@ -31,11 +58,10 @@ public class GameLogic {
 
     }
 
-
     //create new thread for background and start clock for main game
-    public void start() {
+    public void startMainGame() {
         Thread t1 = new Thread(() -> mainGameLogic());
-        t1.setDaemon(true);
+        //t1.setDaemon(true);
         t1.start();
 
     }

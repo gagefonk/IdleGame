@@ -2,9 +2,6 @@ package Game;
 
 public class UpgradeLogic {
 
-    //link to game controller
-    private GameController gameController;
-
     //create tier upgrade variables
     private Long t1Level = 0L;
     private Long t2Level = 0L;
@@ -13,9 +10,34 @@ public class UpgradeLogic {
     private Long t5Level = 0L;
     private Long t6Level = 0L;
 
+
+    //create tier values
+    private Long t1Value = 1L;
+    private Long t2Value = 10L;
+    private Long t3Value = 100L;
+    private Long t4Value = 1000L;
+    private Long t5Value = 10000L;
+    private Long t6Value = 100000L;
+
+
+    //create totalLevels
+    private long totalValue = 0L;
+
+
     //create upgradeModifier
     private int upgradeModifier = 1;
-    
+
+
+    //get/set total value
+    public long getTotalValue() {
+        return totalValue;
+    }
+
+    public void setTotalValue(long totalValue) {
+        this.totalValue = totalValue;
+    }
+
+
     //get/set upgradeModifier
     public int getUpgradeModifier() {
         return upgradeModifier;
@@ -24,6 +46,7 @@ public class UpgradeLogic {
     private void setUpgradeModifier(int upgradeModifier) {
         this.upgradeModifier = upgradeModifier;
     }
+
 
     //get/set for tier levels
     public Long getT1Level() {
@@ -74,15 +97,18 @@ public class UpgradeLogic {
         this.t6Level = t6Level;
     }
 
+
     //upgrade levels
     public Long upgradeTier(Long upgradeLevel){
         return upgradeLevel + upgradeModifier;
     }
 
+
     //change upgrade text for main display
     public String setUpgradeText(Long level){
         return Long.toString(level);
     }
+
     
     //change upgradeModifier on button click
     public void upgradeModifierChange(){
@@ -96,8 +122,9 @@ public class UpgradeLogic {
         }
     }
 
-    //game controller init
-    public void init(GameController gameController){
-        this.gameController = gameController;
+
+    //calculate the total value
+    public void calculateTotalValue(){
+        setTotalValue((t1Value * getT1Level()) + (t2Value * getT2Level())+ (t3Value * getT3Level()) + (t4Value * getT4Level()) + (t5Value * getT5Level()) + (t6Value * getT6Level()));
     }
 }

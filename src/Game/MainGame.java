@@ -1,5 +1,6 @@
 package Game;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,12 +15,10 @@ import java.util.ResourceBundle;
 
 public class MainGame implements Initializable {
 
-    //create gameLogic/upgradeLogic object
-    GameLogic gameLogic = new GameLogic();
+    //create objects
     UpgradeLogic upgrade = new UpgradeLogic();
+    GameLogic gameLogic = new GameLogic(upgrade, this);
 
-    //create link to GameController
-    private GameController gameController;
 
     //create menu
     public MenuBar mainMenuBar;
@@ -49,7 +48,12 @@ public class MainGame implements Initializable {
     //create moneyText text
     @FXML
     //public Text moneyText;
-    public Label moneyText;
+    public Label moneyText = new Label("$10");
+
+    //update text
+    public void setMoneyText(Long text){
+        moneyText.setText(Long.toString(text));
+    }
 
     //create about menu creation
     About about = new About();
@@ -101,15 +105,10 @@ public class MainGame implements Initializable {
         t6TextLevel.setText(upgrade.setUpgradeText(upgrade.getT6Level()));
     }
 
-    //init method for gamecontroller
-    public void init(GameController gameController){
-        this.gameController = gameController;
-    }
-
     //create initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        gameLogic.start();
+        gameLogic.startMainGame();
     }
 
     //draw window for main game
@@ -119,10 +118,6 @@ public class MainGame implements Initializable {
         stage.setOnCloseRequest(e -> closeProgram());
         stage.setTitle("Idle Game");
         stage.setScene(new Scene(root));
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Fxmls/mainGame.fxml"));
-        gameController = loader.getController();
-
         stage.show();
     }
 
