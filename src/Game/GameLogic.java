@@ -4,18 +4,24 @@ import javafx.application.Platform;
 
 public class GameLogic {
 
+    //create link to Game Controller
+    private GameController gameController;
 
-    UpgradeLogic upgradeLogic;
-    MainGame main;
-
-    public void pullUiUpdate(){
-       main.setMoneyText(Long.toString(upgradeLogic.getT1Level()));
+    //init method for game controller
+    public void init(GameController gameController){
+        this.gameController = gameController;
     }
 
     public void mainGameLogic() {
 
         while (true) {
-            Platform.runLater(() -> pullUiUpdate());
+            Platform.runLater(() -> {
+                try{
+                    gameController.updateUi();
+                }catch(NullPointerException t){
+                    t.printStackTrace();
+                }
+            });
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

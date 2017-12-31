@@ -2,6 +2,9 @@ package Game;
 
 public class UpgradeLogic {
 
+    //link to game controller
+    private GameController gameController;
+
     //create tier upgrade variables
     private Long t1Level = 0L;
     private Long t2Level = 0L;
@@ -91,5 +94,10 @@ public class UpgradeLogic {
         }else if (upgradeModifier == 100){
             setUpgradeModifier(1);
         }
+    }
+
+    //game controller init
+    public void init(GameController gameController){
+        this.gameController = gameController;
     }
 }

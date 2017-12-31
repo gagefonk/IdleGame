@@ -18,6 +18,9 @@ public class MainGame implements Initializable {
     GameLogic gameLogic = new GameLogic();
     UpgradeLogic upgrade = new UpgradeLogic();
 
+    //create link to GameController
+    private GameController gameController;
+
     //create menu
     public MenuBar mainMenuBar;
     public MenuItem aboutMenuBtn;
@@ -47,10 +50,6 @@ public class MainGame implements Initializable {
     @FXML
     //public Text moneyText;
     public Label moneyText;
-
-    public void setMoneyText(String string){
-        moneyText.setText(string);
-    }
 
     //create about menu creation
     About about = new About();
@@ -102,6 +101,11 @@ public class MainGame implements Initializable {
         t6TextLevel.setText(upgrade.setUpgradeText(upgrade.getT6Level()));
     }
 
+    //init method for gamecontroller
+    public void init(GameController gameController){
+        this.gameController = gameController;
+    }
+
     //create initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -115,6 +119,10 @@ public class MainGame implements Initializable {
         stage.setOnCloseRequest(e -> closeProgram());
         stage.setTitle("Idle Game");
         stage.setScene(new Scene(root));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Fxmls/mainGame.fxml"));
+        gameController = loader.getController();
+
         stage.show();
     }
 
