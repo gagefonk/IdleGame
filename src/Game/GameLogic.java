@@ -17,6 +17,13 @@ public class GameLogic {
         this.mainGame = mainGame;
     }
 
+    //get money
+    public Long getMoney(){
+        return money;
+    }
+
+
+    //update ui when thread sleeps
     public void updateUi(){
         mainGame.moneyText.setText("$" + Long.toString(money += moneyIncrement));
         upgradeLogic.calculateTotalValue();
