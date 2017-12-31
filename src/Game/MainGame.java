@@ -133,6 +133,7 @@ public class MainGame implements Initializable {
         stage.setOnCloseRequest(e -> closeProgram());
         stage.setTitle("Idle Game");
         stage.setScene(new Scene(root));
+        stage.setResizable(false);
         stage.show();
     }
 
