@@ -98,6 +98,31 @@ public class UpgradeLogic {
     }
 
 
+    //get tier values
+    public Long getT1Value() {
+        return t1Value;
+    }
+
+    public Long getT2Value() {
+        return t2Value;
+    }
+
+    public Long getT3Value() {
+        return t3Value;
+    }
+
+    public Long getT4Value() {
+        return t4Value;
+    }
+
+    public Long getT5Value() {
+        return t5Value;
+    }
+
+    public Long getT6Value() {
+        return t6Value;
+    }
+
     //upgrade levels
     public Long upgradeTier(Long upgradeLevel){
         return upgradeLevel + upgradeModifier;

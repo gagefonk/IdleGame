@@ -92,6 +92,36 @@
                </children>
             </AnchorPane>
             <Text fx:id="t1UpgradeCostText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="6" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Text fx:id="t1MoneyPerSec" layoutX="52.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0 /Sec" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Text fx:id="t2MoneyPerSec" layoutX="57.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0 /Sec" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Text fx:id="t3MoneyPerSec" layoutX="55.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0 /Sec" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <Text fx:id="t4MoneyPerSec" layoutX="52.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0 /Sec" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <children>
+                  <Text fx:id="t5MoneyPerSec" layoutX="50.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0 /Sec" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <children>
+                  <Text fx:id="t6MoneyPerSec" layoutX="43.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0 /Sec" />
+               </children>
+            </AnchorPane>
          </children>
       </GridPane>
       <Button fx:id="modifierBtn" layoutX="740.0" layoutY="153.0" mnemonicParsing="false" onAction="#modifierBtnClicked" prefHeight="25.0" prefWidth="97.0" text="Modifier: 1" />

@@ -45,6 +45,15 @@ public class MainGame implements Initializable {
     public Text t5TextLevel;
     public Text t6TextLevel;
 
+    //create tier money per second text
+    public Text t1MoneyPerSec;
+    public Text t2MoneyPerSec;
+    public Text t3MoneyPerSec;
+    public Text t4MoneyPerSec;
+    public Text t5MoneyPerSec;
+    public Text t6MoneyPerSec;
+
+
     //create moneyText text
     @FXML
     //public Text moneyText;
@@ -78,31 +87,37 @@ public class MainGame implements Initializable {
     public void T1UpgradeBtnClicked(){
         upgrade.setT1Level(upgrade.upgradeTier(upgrade.getT1Level()));
         t1TextLevel.setText(upgrade.setUpgradeText(upgrade.getT1Level()));
+        t1MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT1Level() * upgrade.getT1Value()) + " /sec");
     }
 
     public void T2UpgradeBtnClicked(){
         upgrade.setT2Level(upgrade.upgradeTier(upgrade.getT2Level()));
         t2TextLevel.setText(upgrade.setUpgradeText(upgrade.getT2Level()));
+        t2MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT2Level() * upgrade.getT2Value()) + " /sec");
     }
 
     public void T3UpgradeBtnClicked(){
         upgrade.setT3Level(upgrade.upgradeTier(upgrade.getT3Level()));
         t3TextLevel.setText(upgrade.setUpgradeText(upgrade.getT3Level()));
+        t3MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT3Level() * upgrade.getT3Value()) + " /sec");
     }
 
     public void T4UpgradeBtnClicked(){
         upgrade.setT4Level(upgrade.upgradeTier(upgrade.getT4Level()));
         t4TextLevel.setText(upgrade.setUpgradeText(upgrade.getT4Level()));
+        t4MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT4Level() * upgrade.getT4Value()) + " /sec");
     }
 
     public void T5UpgradeBtnClicked(){
         upgrade.setT5Level(upgrade.upgradeTier(upgrade.getT5Level()));
         t5TextLevel.setText(upgrade.setUpgradeText(upgrade.getT5Level()));
+        t5MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT5Level() * upgrade.getT5Value()) + " /sec");
     }
 
     public void T6UpgradeBtnClicked(){
         upgrade.setT6Level(upgrade.upgradeTier(upgrade.getT6Level()));
         t6TextLevel.setText(upgrade.setUpgradeText(upgrade.getT6Level()));
+        t6MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT6Level() * upgrade.getT6Value()) + " /sec");
     }
 
     //create initializable
