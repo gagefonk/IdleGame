@@ -7,9 +7,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -117,6 +123,7 @@ public class MainGame implements Initializable {
             t2MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT2Level() * upgrade.getT2Value()) + " /sec");
             gameLogic.setMoney((gameLogic.getMoney() - upgrade.getT2UpgradeCost()));
             upgrade.setT2UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT2UpgradeCost(), upgrade.getT2Level()));
+            checkForUpgrade();
         }
     }
 
@@ -158,6 +165,42 @@ public class MainGame implements Initializable {
             gameLogic.setMoney(gameLogic.getMoney() - upgrade.getT6UpgradeCost());
             upgrade.setT6UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT6UpgradeCost(), upgrade.getT6Level()));
         }
+    }
+
+
+    //check to see if able to be upgraded and change color of button if not able to be upgradeable
+    public void checkForUpgrade(){
+        if (gameLogic.getMoney() < (upgrade.getT1UpgradeCost() * upgrade.getUpgradeModifier())) {
+            t1UpgradeBtn.setDisable(true);
+        }else{
+            t1UpgradeBtn.setDisable(false);
+        }
+        if (gameLogic.getMoney() < (upgrade.getT2UpgradeCost() * upgrade.getUpgradeModifier())) {
+            t2UpgradeBtn.setDisable(true);
+        }else{
+            t2UpgradeBtn.setDisable(false);
+        }
+        if (gameLogic.getMoney() < (upgrade.getT3UpgradeCost() * upgrade.getUpgradeModifier())) {
+            t3UpgradeBtn.setDisable(true);
+        }else{
+            t3UpgradeBtn.setDisable(false);
+        }
+        if (gameLogic.getMoney() < (upgrade.getT4UpgradeCost() * upgrade.getUpgradeModifier())) {
+            t4UpgradeBtn.setDisable(true);
+        }else{
+            t4UpgradeBtn.setDisable(false);
+        }
+        if (gameLogic.getMoney() < (upgrade.getT5UpgradeCost() * upgrade.getUpgradeModifier())) {
+            t5UpgradeBtn.setDisable(true);
+        }else{
+            t5UpgradeBtn.setDisable(false);
+        }
+        if (gameLogic.getMoney() < (upgrade.getT6UpgradeCost() * upgrade.getUpgradeModifier())) {
+            t6UpgradeBtn.setDisable(true);
+        }else{
+            t6UpgradeBtn.setDisable(false);
+        }
+
     }
 
     //create Initializable
