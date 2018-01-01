@@ -36,6 +36,7 @@ public class GameLogic {
         //print for testing
 //        System.out.println(upgradeLogic.getTotalValue());
 //        System.out.println(upgradeLogic.getT1UpgradeCost());
+        System.out.println(upgradeLogic.getT2UpgradeCost());
     }
 
 

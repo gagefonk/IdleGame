@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public class MainGame implements Initializable {
 
     //create objects
-    UpgradeLogic upgrade = new UpgradeLogic();
+    UpgradeLogic upgrade = new UpgradeLogic(this);
     GameLogic gameLogic = new GameLogic(upgrade, this);
 
 

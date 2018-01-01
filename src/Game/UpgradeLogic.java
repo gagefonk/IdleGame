@@ -2,6 +2,13 @@ package Game;
 
 public class UpgradeLogic {
 
+    //ref main obj
+    MainGame maingame;
+
+    public UpgradeLogic(MainGame mainGame){
+        this.maingame = mainGame;
+    }
+
     //create tier upgrade variables
     private Long t1Level = 0L;
     private Long t2Level = 0L;
@@ -208,10 +215,28 @@ public class UpgradeLogic {
         
         if (upgradeModifier == 1){
             setUpgradeModifier(10);
+            setT1UpgradeCost(getT1UpgradeCost() * 10);
+            setT2UpgradeCost(getT2UpgradeCost() * 10);
+            setT3UpgradeCost(getT3UpgradeCost() * 10);
+            setT4UpgradeCost(getT4UpgradeCost() * 10);
+            setT5UpgradeCost(getT5UpgradeCost() * 10);
+            setT6UpgradeCost(getT6UpgradeCost() * 10);
         } else if (upgradeModifier == 10){
             setUpgradeModifier(100);
+            setT1UpgradeCost(getT1UpgradeCost() * 100);
+            setT2UpgradeCost(getT2UpgradeCost() * 100);
+            setT3UpgradeCost(getT3UpgradeCost() * 100);
+            setT4UpgradeCost(getT4UpgradeCost() * 100);
+            setT5UpgradeCost(getT5UpgradeCost() * 100);
+            setT6UpgradeCost(getT6UpgradeCost() * 100);
         }else if (upgradeModifier == 100){
             setUpgradeModifier(1);
+            setT1UpgradeCost(getT1UpgradeCost() / 1000);
+            setT2UpgradeCost(getT2UpgradeCost() / 1000);
+            setT3UpgradeCost(getT3UpgradeCost() / 1000);
+            setT4UpgradeCost(getT4UpgradeCost() / 1000);
+            setT5UpgradeCost(getT5UpgradeCost() / 1000);
+            setT6UpgradeCost(getT6UpgradeCost() / 1000);
         }
     }
 
