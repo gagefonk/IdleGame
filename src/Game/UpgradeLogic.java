@@ -12,12 +12,20 @@ public class UpgradeLogic {
 
 
     //create tier values
-    private Long t1Value = 1L;
-    private Long t2Value = 10L;
-    private Long t3Value = 100L;
-    private Long t4Value = 1000L;
-    private Long t5Value = 10000L;
-    private Long t6Value = 100000L;
+    private final Long t1Value = 1L;
+    private final Long t2Value = 10L;
+    private final Long t3Value = 100L;
+    private final Long t4Value = 1000L;
+    private final Long t5Value = 10000L;
+    private final Long t6Value = 100000L;
+
+    //create upgrade cost variables
+    private Long t1UpgradeCost = 10L;
+    private Long t2UpgradeCost = 1000L;
+    private Long t3UpgradeCost = 100000L;
+    private Long t4UpgradeCost = 10000000L;
+    private Long t5UpgradeCost = 1000000000L;
+    private Long t6UpgradeCost = 100000000000L;
 
 
     //create totalLevels
@@ -123,9 +131,69 @@ public class UpgradeLogic {
         return t6Value;
     }
 
+
+    //get/set upgrade cost
+    public Long getT1UpgradeCost() {
+        return t1UpgradeCost;
+    }
+
+    public void setT1UpgradeCost(Long t1UpgradeCost) {
+        this.t1UpgradeCost = t1UpgradeCost;
+    }
+
+    public Long getT2UpgradeCost() {
+        return t2UpgradeCost;
+    }
+
+    public void setT2UpgradeCost(Long t2UpgradeCost) {
+        this.t2UpgradeCost = t2UpgradeCost;
+    }
+
+    public Long getT3UpgradeCost() {
+        return t3UpgradeCost;
+    }
+
+    public void setT3UpgradeCost(Long t3UpgradeCost) {
+        this.t3UpgradeCost = t3UpgradeCost;
+    }
+
+    public Long getT4UpgradeCost() {
+        return t4UpgradeCost;
+    }
+
+    public void setT4UpgradeCost(Long t4UpgradeCost) {
+        this.t4UpgradeCost = t4UpgradeCost;
+    }
+
+    public Long getT5UpgradeCost() {
+        return t5UpgradeCost;
+    }
+
+    public void setT5UpgradeCost(Long t5UpgradeCost) {
+        this.t5UpgradeCost = t5UpgradeCost;
+    }
+
+    public Long getT6UpgradeCost() {
+        return t6UpgradeCost;
+    }
+
+    public void setT6UpgradeCost(Long t6UpgradeCOst) {
+        this.t6UpgradeCost = t6UpgradeCOst;
+    }
+
+
+
     //upgrade levels
     public Long upgradeTier(Long upgradeLevel){
         return upgradeLevel + upgradeModifier;
+    }
+
+
+    //update upgrade cost
+    public Long updateUpgradeCost(Long currentUpgradeCost, Long level){
+        Long newUpgradeCost;
+        newUpgradeCost = currentUpgradeCost * 2;
+        return newUpgradeCost;
     }
 
 

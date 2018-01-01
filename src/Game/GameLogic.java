@@ -22,6 +22,9 @@ public class GameLogic {
         return money;
     }
 
+    //set money
+    public void setMoney(Long money){ this.money = money; }
+
 
     //update ui when thread sleeps
     public void updateUi(){
@@ -31,7 +34,8 @@ public class GameLogic {
 
 
         //print for testing
-        System.out.println(upgradeLogic.getTotalValue());
+//        System.out.println(upgradeLogic.getTotalValue());
+//        System.out.println(upgradeLogic.getT1UpgradeCost());
     }
 
 

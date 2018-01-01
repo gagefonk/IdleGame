@@ -85,42 +85,67 @@ public class MainGame implements Initializable {
     }
 
     public void T1UpgradeBtnClicked(){
-        upgrade.setT1Level(upgrade.upgradeTier(upgrade.getT1Level()));
-        t1TextLevel.setText(upgrade.setUpgradeText(upgrade.getT1Level()));
-        t1MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT1Level() * upgrade.getT1Value()) + " /sec");
+        if (gameLogic.getMoney() >= (upgrade.getT1UpgradeCost() * upgrade.getUpgradeModifier())) {
+            upgrade.setT1Level(upgrade.upgradeTier(upgrade.getT1Level()));
+            t1TextLevel.setText(upgrade.setUpgradeText(upgrade.getT1Level()));
+            t1MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT1Level() * upgrade.getT1Value()) + " /sec");
+            //testing updating upgrade cost
+            gameLogic.setMoney(gameLogic.getMoney() - upgrade.getT1UpgradeCost());
+            upgrade.setT1UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT1UpgradeCost(), upgrade.getT1Level()));
+        }
     }
 
     public void T2UpgradeBtnClicked(){
-        upgrade.setT2Level(upgrade.upgradeTier(upgrade.getT2Level()));
-        t2TextLevel.setText(upgrade.setUpgradeText(upgrade.getT2Level()));
-        t2MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT2Level() * upgrade.getT2Value()) + " /sec");
+        if (gameLogic.getMoney() >= (upgrade.getT2UpgradeCost() * upgrade.getUpgradeModifier())) {
+            upgrade.setT2Level(upgrade.upgradeTier(upgrade.getT2Level()));
+            t2TextLevel.setText(upgrade.setUpgradeText(upgrade.getT2Level()));
+            t2MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT2Level() * upgrade.getT2Value()) + " /sec");
+            gameLogic.setMoney((gameLogic.getMoney() - upgrade.getT2UpgradeCost()));
+            upgrade.setT2UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT2UpgradeCost(), upgrade.getT2Level()));
+        }
     }
 
     public void T3UpgradeBtnClicked(){
-        upgrade.setT3Level(upgrade.upgradeTier(upgrade.getT3Level()));
-        t3TextLevel.setText(upgrade.setUpgradeText(upgrade.getT3Level()));
-        t3MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT3Level() * upgrade.getT3Value()) + " /sec");
+        if (gameLogic.getMoney() >= (upgrade.getT3UpgradeCost() * upgrade. getUpgradeModifier())) {
+            upgrade.setT3Level(upgrade.upgradeTier(upgrade.getT3Level()));
+            t3TextLevel.setText(upgrade.setUpgradeText(upgrade.getT3Level()));
+            t3MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT3Level() * upgrade.getT3Value()) + " /sec");
+            gameLogic.setMoney(gameLogic.getMoney() - upgrade.getT3UpgradeCost());
+            upgrade.setT3UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT3UpgradeCost(), upgrade.getT3Level()));
+        }
     }
 
     public void T4UpgradeBtnClicked(){
-        upgrade.setT4Level(upgrade.upgradeTier(upgrade.getT4Level()));
-        t4TextLevel.setText(upgrade.setUpgradeText(upgrade.getT4Level()));
-        t4MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT4Level() * upgrade.getT4Value()) + " /sec");
+        if (gameLogic.getMoney() >= (upgrade.getT4UpgradeCost() * upgrade.getUpgradeModifier())) {
+            upgrade.setT4Level(upgrade.upgradeTier(upgrade.getT4Level()));
+            t4TextLevel.setText(upgrade.setUpgradeText(upgrade.getT4Level()));
+            t4MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT4Level() * upgrade.getT4Value()) + " /sec");
+            gameLogic.setMoney(gameLogic.getMoney() - upgrade.getT4UpgradeCost());
+            upgrade.setT4UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT4UpgradeCost(), upgrade.getT4Level()));
+        }
     }
 
     public void T5UpgradeBtnClicked(){
-        upgrade.setT5Level(upgrade.upgradeTier(upgrade.getT5Level()));
-        t5TextLevel.setText(upgrade.setUpgradeText(upgrade.getT5Level()));
-        t5MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT5Level() * upgrade.getT5Value()) + " /sec");
+        if (gameLogic.getMoney() >= (upgrade.getT5UpgradeCost() * upgrade.getUpgradeModifier())) {
+            upgrade.setT5Level(upgrade.upgradeTier(upgrade.getT5Level()));
+            t5TextLevel.setText(upgrade.setUpgradeText(upgrade.getT5Level()));
+            t5MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT5Level() * upgrade.getT5Value()) + " /sec");
+            gameLogic.setMoney(gameLogic.getMoney() - upgrade.getT5UpgradeCost());
+            upgrade.setT5UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT5UpgradeCost(), upgrade.getT5Level()));
+        }
     }
 
     public void T6UpgradeBtnClicked(){
-        upgrade.setT6Level(upgrade.upgradeTier(upgrade.getT6Level()));
-        t6TextLevel.setText(upgrade.setUpgradeText(upgrade.getT6Level()));
-        t6MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT6Level() * upgrade.getT6Value()) + " /sec");
+        if (gameLogic.getMoney() >= (upgrade.getT6UpgradeCost() * upgrade.getUpgradeModifier())) {
+            upgrade.setT6Level(upgrade.upgradeTier(upgrade.getT6Level()));
+            t6TextLevel.setText(upgrade.setUpgradeText(upgrade.getT6Level()));
+            t6MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT6Level() * upgrade.getT6Value()) + " /sec");
+            gameLogic.setMoney(gameLogic.getMoney() - upgrade.getT6UpgradeCost());
+            upgrade.setT6UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT6UpgradeCost(), upgrade.getT6Level()));
+        }
     }
 
-    //create initializable
+    //create Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         gameLogic.startMainGame();
