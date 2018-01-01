@@ -27,7 +27,7 @@
       </MenuBar>
       <Pane layoutX="794.0" layoutY="107.0" prefHeight="34.0" prefWidth="195.0" style="-fx-background-color: #013335;">
          <children>
-            <Label fx:id="moneyText" alignment="CENTER_RIGHT" layoutX="5.0" layoutY="12.0" prefHeight="6.0" prefWidth="185.0" textAlignment="RIGHT" textFill="WHITE" />
+            <Label fx:id="moneyText" alignment="CENTER_RIGHT" layoutX="5.0" layoutY="12.0" prefHeight="6.0" prefWidth="185.0" textAlignment="RIGHT" textFill="#80bdbf" />
          </children>
       </Pane>
       <GridPane layoutX="7.0" layoutY="390.0" prefHeight="410.0" prefWidth="985.0">
