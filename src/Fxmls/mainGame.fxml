@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #6A9B9D;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.MainGame">
    <children>
-      <Label layoutX="292.0" layoutY="-14.0" minHeight="-Infinity" prefHeight="121.0" prefWidth="320.0" text="Idle Game" textFill="#013335">
+      <Label layoutX="340.0" layoutY="-14.0" minHeight="-Infinity" prefHeight="121.0" prefWidth="320.0" text="Idle Game" textFill="#013335">
          <font>
             <Font name="Harlow Solid Italic" size="72.0" />
          </font>
