@@ -9,7 +9,7 @@ public class GameLogic {
     MainGame mainGame;
 
     //create variables
-    private long money = 10000000L;
+    private long money = 10L;
     private long moneyIncrement = 0L;
 
     public GameLogic(UpgradeLogic upgradeLogic, MainGame mainGame) {
