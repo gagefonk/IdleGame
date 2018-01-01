@@ -28,9 +28,10 @@ public class GameLogic {
 
     //update ui when thread sleeps
     public void updateUi(){
-        mainGame.moneyText.setText("$" + Long.toString(money += moneyIncrement));
+        mainGame.setMoneyText(money += moneyIncrement);
         upgradeLogic.calculateTotalValue();
         moneyIncrement = upgradeLogic.getTotalValue();
+        mainGame.setUpgradeCostLabelText();
 
 
         //print for testing

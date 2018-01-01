@@ -122,6 +122,66 @@
                   <Text fx:id="t6MoneyPerSec" layoutX="43.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0 /Sec" />
                </children>
             </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="t1UpgradeCostLabel" layoutX="14.0" layoutY="37.0" text="\$10">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="14.0" text="Upgrade Cost:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="t2UpgradeCostLabel" layoutX="14.0" layoutY="38.0" text="\$1000">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="14.0" text="Upgrade Cost:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="t3UpgradeCostLabel" layoutX="14.0" layoutY="38.0" text="\$100000">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="14.0" text="Upgrade Cost:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="t4UpgradeCostLabel" layoutX="14.0" layoutY="38.0" text="\$10000000">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="14.0" text="Upgrade Cost:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="t5UpgradeCostLabel" layoutX="14.0" layoutY="38.0" text="\$1000000000">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="14.0" text="Upgrade Cost:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="t6UpgradeCostLabel" layoutX="14.0" layoutY="38.0" text="\$100000000000">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="14.0" text="Upgrade Cost:" />
+               </children>
+            </AnchorPane>
          </children>
       </GridPane>
       <Button fx:id="modifierBtn" layoutX="843.0" layoutY="151.0" mnemonicParsing="false" onAction="#modifierBtnClicked" prefHeight="25.0" prefWidth="97.0" text="Modifier: 1" />

@@ -34,6 +34,14 @@ public class MainGame implements Initializable {
     public Button t5UpgradeBtn;
     public Button t6UpgradeBtn;
 
+    //create upgrade cost labels;
+    public Label t1UpgradeCostLabel;
+    public Label t2UpgradeCostLabel;
+    public Label t3UpgradeCostLabel;
+    public Label t4UpgradeCostLabel;
+    public Label t5UpgradeCostLabel;
+    public Label t6UpgradeCostLabel;
+
     //create modifier btn
     public Button modifierBtn;
 
@@ -55,13 +63,20 @@ public class MainGame implements Initializable {
 
 
     //create moneyText text
-    @FXML
-    //public Text moneyText;
-    public Label moneyText = new Label("$10");
+    public Label moneyText;
 
     //update text
     public void setMoneyText(Long text){
-        moneyText.setText(Long.toString(text));
+        moneyText.setText("$" + Long.toString(text));
+    }
+
+    public void setUpgradeCostLabelText(){
+        t1UpgradeCostLabel.setText("$" + Long.toString(upgrade.getT1UpgradeCost()));
+        t2UpgradeCostLabel.setText("$" + Long.toString(upgrade.getT2UpgradeCost()));
+        t3UpgradeCostLabel.setText("$" + Long.toString(upgrade.getT3UpgradeCost()));
+        t4UpgradeCostLabel.setText("$" + Long.toString(upgrade.getT4UpgradeCost()));
+        t5UpgradeCostLabel.setText("$" + Long.toString(upgrade.getT5UpgradeCost()));
+        t6UpgradeCostLabel.setText("$" + Long.toString(upgrade.getT6UpgradeCost()));
     }
 
     //create about menu creation
