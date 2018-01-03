@@ -211,7 +211,7 @@ public class MainGame implements Initializable {
 
     //draw window for main game
     public void display() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../Fxmls/mainGame.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Fxmls/mainGame.fxml"));
         Stage stage = new Stage();
         stage.setOnCloseRequest(e -> closeProgram());
         stage.setTitle("Idle Game");

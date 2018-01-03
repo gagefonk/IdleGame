@@ -33,12 +33,6 @@ public class GameLogic {
         moneyIncrement = upgradeLogic.getTotalValue();
         mainGame.setUpgradeCostLabelText();
         mainGame.checkForUpgrade();
-
-
-        //print for testing
-//        System.out.println(upgradeLogic.getTotalValue());
-//        System.out.println(upgradeLogic.getT1UpgradeCost());
-        System.out.println(upgradeLogic.getT2UpgradeCost());
     }
 
 

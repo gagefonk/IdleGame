@@ -19,7 +19,7 @@ public class About {
     }
 
     public void display() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../Fxmls/about.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Fxmls/about.fxml"));
         Stage stage = new Stage();
         stage.setTitle("About");
         stage.setScene(new Scene(root));
