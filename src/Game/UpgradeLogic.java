@@ -199,7 +199,7 @@ public class UpgradeLogic {
     //update upgrade cost
     public Long updateUpgradeCost(Long currentUpgradeCost, Long level){
         Long newUpgradeCost;
-        newUpgradeCost = currentUpgradeCost * 2;
+        newUpgradeCost = (currentUpgradeCost * 2) - (currentUpgradeCost / 2);
         return newUpgradeCost;
     }
 
