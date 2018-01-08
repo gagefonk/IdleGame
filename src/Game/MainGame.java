@@ -110,7 +110,6 @@ public class MainGame implements Initializable {
             upgrade.setT1Level(upgrade.upgradeTier(upgrade.getT1Level()));
             t1TextLevel.setText(upgrade.setUpgradeText(upgrade.getT1Level()));
             t1MoneyPerSec.setText("$" + upgrade.setUpgradeText(upgrade.getT1Level() * upgrade.getT1Value()) + " /sec");
-            //testing updating upgrade cost
             gameLogic.setMoney(gameLogic.getMoney() - upgrade.getT1UpgradeCost());
             upgrade.setT1UpgradeCost(upgrade.updateUpgradeCost(upgrade.getT1UpgradeCost(), upgrade.getT1Level()));
         }
